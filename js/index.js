@@ -19,7 +19,7 @@ function getLabelsAndData(data) {
     (acc, entry) => {
       acc.years.push(entry.Year);
       acc.temps.push(Number(entry.Glob) + GLOBAL_MEAN_TEMPERATURE);
-
+      console.log(acc);
       return acc;
     },
     { years: [], temps: [] }
@@ -33,9 +33,23 @@ function drawChart(labels, data) {
       labels,
       datasets: [
         {
-          label: "# Средняя глобальная температура",
+          label: "# Average temperature",
           data,
           borderColor: "rgba(255, 99, 132, 1)",
+          borderWidth: 2,
+          fill: false,
+        },
+        {
+          label: "# Northern Average temperature",
+          data,
+          borderColor: "CornflowerBlue",
+          borderWidth: 1,
+          fill: false,
+        },
+        {
+          label: "# Southern Average temperature",
+          data,
+          borderColor: "GoldenRod",
           borderWidth: 1,
           fill: false,
         },

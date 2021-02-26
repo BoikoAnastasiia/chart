@@ -38,22 +38,22 @@ function drawChart(labels, dataGlobal, dataNorth, dataSouth) {
       labels,
       datasets: [
         {
-          label: "# Average temperature",
-          dataGlobal,
+          label: "Average temperature",
+          data: dataGlobal,
           borderColor: "rgba(255, 99, 132, 1)",
           borderWidth: 2,
           fill: false,
         },
         {
-          label: "# Northern Average temperature",
-          dataNorth,
+          label: "Northern Average temperature",
+          data: dataNorth,
           borderColor: "CornflowerBlue",
           borderWidth: 1,
           fill: false,
         },
         {
-          label: "# Southern Average temperature",
-          dataSouth,
+          label: "Southern Average temperature",
+          data: dataSouth,
           borderColor: "GoldenRod",
           borderWidth: 1,
           fill: false,
